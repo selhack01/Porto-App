@@ -1,0 +1,39 @@
+{
+    "3D_Object": [
+        {
+            "image_url": "https://picsum.photos/200",
+            "name": "İsim 1",
+            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been."
+        },
+        {
+            "image_url": "https://picsum.photos/300",
+            "name": "İsim 2",
+            "description": "description2"
+        },
+        {
+            "image_url": "https://picsum.photos/400",
+            "name": "İsim 3",
+            "description": "description3"
+        }
+    ],
+    "Project": [
+        {
+            "image_url": "https://picsum.photos/500",
+            "name": "İsim 1",
+            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been.",
+            "url": "https://www.youtube.com/watch?v=Q5ZAXbCtOMg&list=PLZFrBLNgbT_nv3et1ffaAspHIe8ds-ceX&index=2&ab_channel=MuhammetArslanta%C5%9F-DijitalG%C3%B6%C3%A7ebe"
+        },
+        {
+            "image_url": "https://picsum.photos/600",
+            "name": "İsim 2",
+            "description": "description2",
+            "url": "https://www.youtube.com/watch?v=Q5ZAXbCtOMg&list=PLZFrBLNgbT_nv3et1ffaAspHIe8ds-ceX&index=2&ab_channel=MuhammetArslanta%C5%9F-DijitalG%C3%B6%C3%A7ebe"
+        },
+        {
+            "image_url": "https://picsum.photos/700",
+            "name": "İsim 3",
+            "description": "description3",
+            "url": "https://www.youtube.com/watch?v=Q5ZAXbCtOMg&list=PLZFrBLNgbT_nv3et1ffaAspHIe8ds-ceX&index=2&ab_channel=MuhammetArslanta%C5%9F-DijitalG%C3%B6%C3%A7ebe"
+        }
+    ]
+}
