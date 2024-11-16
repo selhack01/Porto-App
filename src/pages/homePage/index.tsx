@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Image, Linking, View, } from "react-native";
+import { Image, Linking, View } from "react-native";
 import { CompositeScreenProps } from "@react-navigation/native";
 import stylesheet from "./stylesheet";
 import { Button, Text } from "ncore-mobile";
@@ -7,19 +7,19 @@ import Carousel from "react-native-reanimated-carousel";
 import data from '../../data/data.json';
 
 const Home = ({ navigation }: { navigation: CompositeScreenProps<any, any>["navigation"] }) => {
-    const [Data, setData] = useState(data["3D_Object"]);
+    const [Data, setData] = useState(data["Project"]);
 
     return <View style={stylesheet.container}>
         <View style={stylesheet.headerContainer}>
-            <Text variant="header4" color="danger">AR Portföy</Text>
+            <Text variant="header4" color="danger">Porto</Text>
         </View>
         <View style={stylesheet.contentContainer}>
             <Carousel
                 style={stylesheet.carousel}
                 loop
                 width={350}
-                height={435}
-                autoPlay={false}
+                height={475}
+                autoPlay={true}
                 data={Data}
                 scrollAnimationDuration={1000}
                 renderItem={({ item }) => (
@@ -29,19 +29,20 @@ const Home = ({ navigation }: { navigation: CompositeScreenProps<any, any>["navi
                             source={{
                                 uri: item.image_url,
                             }}
+                            resizeMode="contain"
                         />
                         <View style={stylesheet.cardHeader}>
-                            <Text variant="header6" color="gray0">{item.name}</Text>
+                            <Text variant="header5" color="danger">{item.name}</Text>
                             <Text variant="caption" color="gray40">{item.description}</Text>
                         </View>
                         <View style={stylesheet.cardButtons}>
                             <Button
-                                title="3D View"
+                                title={(Data == data["3D_Object"]) ? "3D View" : "Review"}
                                 size="small"
-                                color="warning"
+                                color="danger"
                                 onPress={() => {
                                     if (Data == data["3D_Object"]) {
-                                        navigation.navigate('ArPage', item)
+                                        navigation.navigate('ArPage')
                                     }
                                     else {
                                         Linking.openURL(item.url)
@@ -64,7 +65,7 @@ const Home = ({ navigation }: { navigation: CompositeScreenProps<any, any>["navi
                 }}
             />
             <Button
-                title="Projects"
+                title="Project"
                 size="small"
                 color="danger"
                 onPress={() => {
