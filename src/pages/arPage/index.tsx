@@ -1,7 +1,7 @@
 import React from "react";
 import { View } from "react-native";
 import stylesheet from "./stylesheet";
-import { Viro3DObject, ViroAmbientLight, ViroAnimations, ViroARScene, ViroARSceneNavigator, ViroBox, ViroMaterials } from "@reactvision/react-viro";
+import { Viro3DObject, ViroAmbientLight, ViroAnimations, ViroARScene, ViroARSceneNavigator, ViroDirectionalLight, ViroMaterials } from "@reactvision/react-viro";
 import { Button } from "ncore-mobile";
 import { CompositeScreenProps } from "@react-navigation/native";
 
@@ -11,7 +11,7 @@ const Arpage = ({ navigation }: { navigation: CompositeScreenProps<any, any>["na
 
         ViroMaterials.createMaterials({
             material: {
-                diffuseTexture: require('./../../assets/ARExporting/DiamondBake.png')
+                diffuseTexture: require('./../../assets/Scoter/ScoterBake.png')
             }
         });
 
@@ -25,16 +25,25 @@ const Arpage = ({ navigation }: { navigation: CompositeScreenProps<any, any>["na
         })
 
         return <ViroARScene>
+            <ViroDirectionalLight
+                color="#FFFFFF"
+                direction={[0, -1, 0]}
+                shadowOrthographicPosition={[0, 3, -5]}
+                shadowOrthographicSize={10}
+                shadowNearZ={2}
+                shadowFarZ={9}
+                castsShadow={true} />
+
             <Viro3DObject
-                source={require('./../../assets/ARExporting/Diamond.obj')}
+                source={require('./../../assets/Scoter/Scoter.obj')}
                 resources={[
-                    require('./../../assets/ARExporting/Diamond.mtl')
+                    require('./../../assets/Scoter/Scoter.mtl')
                 ]}
                 materials={["material"]}
                 type="OBJ"
                 position={[0, -5, -5]}
-                scale={[1, 1, 1]}
-                animation={{ name: 'rotate', loop: true, run: true }}
+                scale={[0.5, 0.5, 0.5]}
+            // animation={{ name: 'rotate', loop: true, run: true }}
             />
         </ViroARScene>
     };
