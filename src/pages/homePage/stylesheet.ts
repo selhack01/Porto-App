@@ -27,7 +27,15 @@ export default StyleSheet.create({
         margin: 10,
         borderRadius: 10,
         alignItems: "center",
-        justifyContent: "space-between"
+        justifyContent: "space-between",
+        shadowColor: "#000000",
+        shadowOffset: {
+            width: 0,
+            height: 0,
+        },
+        shadowOpacity: 0.8,
+        shadowRadius: 10,
+        elevation: 10
     },
     cardImage: {
         width: 250,
@@ -46,8 +54,8 @@ export default StyleSheet.create({
     footerContainer: {
         backgroundColor: "#ffffff",
         padding: 20,
-        borderTopRightRadius: 40,
-        borderTopLeftRadius: 40,
+        borderTopRightRadius: 20,
+        borderTopLeftRadius: 20,
         alignItems: "center",
         flexDirection: 'row',
         justifyContent: 'space-between'

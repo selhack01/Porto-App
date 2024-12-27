@@ -11,6 +11,8 @@ export default StyleSheet.create({
     },
     title: {
         flexDirection: "row",
+        alignItems: 'center',
+        justifyContent: 'center',
         width: '100%'
     },
     LoginContainer: {

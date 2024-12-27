@@ -40,13 +40,19 @@ const Home = ({ navigation }: { navigation: CompositeScreenProps<any, any>["navi
                                     size="small"
                                     color="danger"
                                     onPress={() => {
-                                        if (Data === data["3D_Object"]) {
-                                            navigation.navigate('ArPage');
+                                        const is3DObject = Data === data["3D_Object"];
+                                        const has3DModel = item?.obj;
+
+                                        if (is3DObject && has3DModel) {
+                                            navigation.navigate('ArPage', {
+                                                obj: item.obj,
+                                                mtl: item.mtl,
+                                                png: item.png,
+                                            });
                                         } else {
                                             Linking.openURL(item.url);
                                         }
-                                    }}
-                                />
+                                    }} />
                             </View>
                         </View>
                     )}
@@ -57,19 +63,22 @@ const Home = ({ navigation }: { navigation: CompositeScreenProps<any, any>["navi
                     title="3D Objects"
                     size="small"
                     color="danger"
+                    variant="outline"
                     onPress={() => setData(data["3D_Object"])}
-                />
-                <Button
-                    title="Grafic Design"
-                    size="small"
-                    color="danger"
-                    onPress={() => setData(data["Grafic"])}
                 />
                 <Button
                     title="Project"
                     size="small"
                     color="danger"
+                    variant="outline"
                     onPress={() => setData(data["Project"])}
+                />
+                <Button
+                    title="Grafic Design"
+                    size="small"
+                    color="danger"
+                    variant="outline"
+                    onPress={() => setData(data["Grafic"])}
                 />
             </View>
         </View>
