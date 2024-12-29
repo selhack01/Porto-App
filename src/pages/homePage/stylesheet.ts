@@ -11,23 +11,23 @@ export default StyleSheet.create({
         padding: 20
     },
     contentContainer: {
-        flex: 1,
         justifyContent: "center",
-        alignItems: "center"
+        alignItems: "center",
+        flex: 1,
     },
     carousel: {
-        flex: 1,
         justifyContent: "center",
         alignItems: "center",
+        flex: 1,
     },
     card: {
-        flex: 1,
         backgroundColor: "#ffffff",
+        justifyContent: "space-between",
+        alignItems: "center",
+        borderRadius: 10,
         padding: 25,
         margin: 10,
-        borderRadius: 10,
-        alignItems: "center",
-        justifyContent: "space-between",
+        flex: 1,
         shadowColor: "#000000",
         shadowOffset: {
             width: 0,
@@ -38,26 +38,26 @@ export default StyleSheet.create({
         elevation: 10
     },
     cardImage: {
-        width: 250,
         height: 250,
+        width: 250,
     },
     cardHeader: {
         alignItems: 'flex-start',
-        padding: 10,
         width: '100%',
+        padding: 10,
     },
     cardButtons: {
-        padding: 10,
+        flexDirection: "row-reverse",
         width: '100%',
-        flexDirection: "row-reverse"
+        padding: 10,
     },
     footerContainer: {
+        justifyContent: 'space-between',
         backgroundColor: "#ffffff",
-        padding: 20,
         borderTopRightRadius: 20,
         borderTopLeftRadius: 20,
-        alignItems: "center",
         flexDirection: 'row',
-        justifyContent: 'space-between'
+        alignItems: "center",
+        padding: 20,
     }
 });
