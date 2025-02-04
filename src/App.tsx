@@ -8,26 +8,26 @@ import SplashScreen from "react-native-splash-screen";
 
 
 const NcoreContextAPI = () => {
-  return <View style={{ flex: 1 }}>
-    <Navigation />
-  </View>
+    return <View style={{ flex: 1 }}>
+        <Navigation />
+    </View>
 };
 
 const App = () => {
 
-  useEffect(() => {
-    SplashScreen.hide();
-  }, [])
+    useEffect(() => {
+        SplashScreen.hide();
+    }, [])
 
-  return <GestureHandlerRootView
-    style={stylesheet.container}
-  >
-    {/*@ts-ignore*/}
-    <NCoreProvider>
-      <NcoreContextAPI />
-    </NCoreProvider>
+    return <GestureHandlerRootView
+        style={stylesheet.container}
+    >
+        {/*@ts-ignore*/}
+        <NCoreProvider>
+            <NcoreContextAPI />
+        </NCoreProvider>
 
-  </GestureHandlerRootView >
+    </GestureHandlerRootView >
 
 };
 
